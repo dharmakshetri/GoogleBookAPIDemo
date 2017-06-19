@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GoogleBookAPIDemo</string>
+    <string name="empty_state_message">No Book Found!!, please try another book.</string>
+</resources>

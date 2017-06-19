@@ -1,0 +1,69 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/search_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <EditText
+            android:id="@+id/search_keys"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:hint="enter book name here"/>
+        <Button
+            android:id="@+id/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="search"/>
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ProgressBar
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            style="?android:progressBarStyleLarge"/>
+        <TextView
+            android:id="@+id/loading_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading books"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="128dp"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="16dp"
+        android:horizontalSpacing="10dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"/>
+
+
+
+    <TextView
+        android:id="@+id/empty_state_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:text="@string/empty_state_message"/>
+</LinearLayout>
